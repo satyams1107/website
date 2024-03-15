@@ -30,14 +30,21 @@ export const project = [
     name: "Portfolio Website",
     description:
       "Explored web development by building a personal website to share past projects I developed during my classes or in my free time, experiences gained through internships and RSOs, and contact information to enable people to connect with me. I used the Next.js framework alongside Tailwind CSS to create an appealing website to showcase my profile.",
-    skills: ["nextjs", "tailwind", "css", "javascript", "full-stack", "web-dev"],
+    skills: [
+      "nextjs",
+      "tailwind",
+      "css",
+      "javascript",
+      "full-stack",
+      "web-dev",
+    ],
   },
 ];
 
 const Projects = () => {
   return (
     <>
-     <div className="bg-dark px-10 pt-5 pb-2 text-5xl font-bold">
+      <div className="bg-dark px-10 pt-5 pb-2 text-5xl font-bold">
         <h>Projects</h>
       </div>
       <div className="relative flex items-center content-center bg-dark py-5">
@@ -47,6 +54,7 @@ const Projects = () => {
         >
           {project.map((item) => (
             <div
+              key={item.id}
               className="w-[650px] h-[400px] inline-block cursor-pointer scale-90 hover:scale-95 ease-in-out duration-300 shadow-lg bg-white rounded-xl p-2 shadow-2xl hover:shadow-[0_0_2px_#fff,inset_0_0_5px_#fff,0_0_5px_#08f,0_0_10px_#08f,0_0_10px_#08f]
              "
             >
@@ -66,8 +74,9 @@ const Projects = () => {
                         {item.description}
                       </div>
                       <div className="pl-12 pt-7 pb-2 flex flex-wrap text-l ">
-                        {item.skills.map((skill) => (
-                          <span className="inline-block bg-beige rounded-full px-3 py-1  font-semibold text-gray-700 mr-2 mb-2">
+                        {item.skills.map((skill, index) => (
+                          <span key={index}
+                          className="inline-block bg-beige rounded-full px-3 py-1  font-semibold text-gray-700 mr-2 mb-2">
                             {skill}
                           </span>
                         ))}

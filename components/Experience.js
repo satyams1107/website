@@ -47,6 +47,7 @@ const Experience = () => {
             <div
               className="w-[600px] h-[300px] inline-block cursor-pointer scale-90 hover:scale-95 ease-in-out duration-300 shadow-lg bg-white rounded-xl p-2 shadow-2xl hover:shadow-[0_0_2px_#fff,inset_0_0_5px_#fff,0_0_5px_#08f,0_0_10px_#08f,0_0_10px_#08f]
              "
+             key={item.id}
             >
               <a href={item.link}>
                 <div className=" w-auto">
@@ -66,8 +67,9 @@ const Experience = () => {
                         <p className="text-black">{item.date}</p>
                       </div>
                       <div className="pl-12 pt-7 pb-2 flex flex-wrap text-l ">
-                        {item.skills.map((skill) => (
-                          <span className="inline-block bg-beige rounded-full px-3 py-1  font-semibold text-gray-700 mr-2 mb-2">
+                        {item.skills.map((skill, index) => (
+                          <span key={index}
+                          className="inline-block bg-beige rounded-full px-3 py-1  font-semibold text-gray-700 mr-2 mb-2">
                             {skill}
                           </span>
                         ))}
