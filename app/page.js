@@ -1,8 +1,10 @@
 import React from "react";
 const Home = () => {
   return (
-    <div className="py-10 gap-4 flex flex-row justify-center h-[550px] w-full h-full bg-no-repeat bg-cover
-    bg-[url('https://cdn.pixabay.com/photo/2024/01/30/14/02/road-8542123_1280.jpg')]"  >
+    <div
+      className="py-10 gap-4 flex flex-row justify-center h-[550px] w-full h-full bg-no-repeat bg-cover
+    bg-[url('https://cdn.pixabay.com/photo/2024/01/30/14/02/road-8542123_1280.jpg')]"
+    >
       <div className="px-10 pt-10 drop-shadow-lg">
         <img
           src="https://media.licdn.com/dms/image/C4D03AQEh5TQYOVabFg/profile-displayphoto-shrink_400_400/0/1658277944683?e=1715817600&v=beta&t=6wJXkNsW_zn2-UwrWLKllZBJK_oglZziLGyoAbSV_Sc"
@@ -21,13 +23,22 @@ const Home = () => {
             {" "}
             Innovation, Leadership & Engineering Entrepreneurship
           </p>
-          <a href="https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/computer-engineering">
-          <img
-            className="w-[100px] pt-5"
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Illinois_Block_I.png"
-            alt="UIUC"
-          />
-          </a>
+          <div className="flex flex-row space-x-10">
+            <a href="https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/computer-engineering">
+              <img
+                className="w-[100px] pt-5"
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Illinois_Block_I.png"
+                alt="UIUC"
+              />
+            </a>
+            <a  href="https://tec.illinois.edu/academics/degree">
+            <img
+              className="w-[150px] pt-5"
+              src="https://tec.illinois.edu/_sitemanager/viewphoto.aspx?id=56458&s=1920&h=1200"
+              alt="ILEE"
+            />
+            </a>
+          </div>
         </div>
       </div>
     </div>
