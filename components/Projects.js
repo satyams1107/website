@@ -1,15 +1,39 @@
+'use client';
 import React from "react";
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 export const project = [
   {
     id: 1,
-    logo: "../images/ufit.png",
-    name: "U-Fit",
+    logo: "https://img2.svgdesigns.com/printart/xlarge/Sew_Sweet_Paradise/PGSSP1774.webp",
+    name: "Final Score",
     description:
-      "Developed the UI layout using Figma and translated it over to a Flutter application using Dart to create an app responsible for scheduling daily workouts and facilitated machine-learning capabilities into the app. Implemented Google Firebase as the primary backend and database for user authentication and data storage",
-    skills: ["flutter", "firebase", "dart", "authentication", "app-dev"],
+      "Developed a comprehensive, real-time web application using MySQL and Google Cloud Platform (GCP) to display the last two minutes of NBA data, enabling users to compare players, teams, and referees. Created API endpoints with MySQL, GCP, and REST to service and query 80k+ data entries across various tables in SQL database.",
+    skills: [
+      "MySQL",
+      "Google Cloud Platform",
+      "Javascript",
+      "Next",
+      "Node.js",
+      "Git",
+    ],
   },
   {
     id: 2,
+    logo: "https://seeklogo.com/images/L/linux-logo-76B2B1C6AD-seeklogo.com.png",
+    name: "391OS",
+    description:
+      "Constructed an operating system based on the IA-32 Intel Architecture, incorporating features such as file systems, segmentation, paging, context switching, system calls, interrupt handling, real-time clock, programmable interval timer and scheduling. Allows users to execute various basic commands in a terminal.",
+    skills: [
+      "C",
+      "x86 Assembly",
+      "OS",
+      "IA-32 Intel Architecture",
+      "GDB",
+      "Git",
+    ],
+  },
+  {
+    id: 3,
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Full-protection-shackle-frwiki.svg/1446px-Full-protection-shackle-frwiki.svg.png",
     name: "PassSafe",
     description:
@@ -25,7 +49,15 @@ export const project = [
     ],
   },
   {
-    id: 3,
+    id: 4,
+    logo: "../images/ufit.png",
+    name: "U-Fit",
+    description:
+      "Developed the UI layout using Figma and translated it over to a Flutter application using Dart to create an app responsible for scheduling daily workouts and facilitated machine-learning capabilities into the app. Implemented Google Firebase as the primary backend and database for user authentication and data storage",
+    skills: ["flutter", "firebase", "dart", "authentication", "app-dev"],
+  },
+  {
+    id: 5,
     logo: "../images/web-logo.png",
     name: "Portfolio Website",
     description:
@@ -42,14 +74,25 @@ export const project = [
 ];
 
 const Projects = () => {
+  const slideLeft = () => {
+    var slider = document.getElementById('slider_projects');
+    slider.scrollLeft = slider.scrollLeft - 500;
+  };
+
+  const slideRight = () => {
+    var slider = document.getElementById('slider_projects');
+    slider.scrollLeft = slider.scrollLeft + 500;
+  };
+
   return (
     <>
       <div className="bg-dark px-10 pt-5 pb-2 text-5xl font-bold">
         <h>Projects</h>
       </div>
       <div className="relative flex items-center content-center bg-dark py-5">
+        <MdChevronLeft className="opacity-75 hover:opacity-100 bg-silver bg-opacity-50" onClick={slideLeft} size={100} />
         <div
-          id="slider"
+          id="slider_projects"
           className="w-auto h-[auto] items-center content-center soverflow-x-scroll overflow-y-hidden scroll whitespace-nowrap scroll-smooth scrollbar-hide space-x-10"
         >
           {project.map((item) => (
@@ -67,7 +110,7 @@ const Projects = () => {
                       alt="/"
                     />
                     <div className="flex flex-col w-[400px]">
-                      <div class=" text-3xl mb-2 text-center">
+                      <div className=" text-3xl mb-2 text-center">
                         <p className="text-black font-bold">{item.name}</p>
                       </div>
                       <div className="text-lg text-center text-black text-wrap">
@@ -88,6 +131,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        <MdChevronRight className="opacity-75 hover:opacity-100 bg-silver bg-opacity-50" onClick={slideRight} size={100} />
       </div>
     </>
   );
