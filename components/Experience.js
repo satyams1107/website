@@ -35,8 +35,8 @@ export const experience = [
   {
     id: 4,
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzcMf1wCjte6pX_MvN88oyO0TH1jvtG0l1AHZD3Ta3Sw&s",
-    name: "Illini EV Concept",
-    role: "Embedded Project Lead",
+    name: "Sylvan Learning Center",
+    role: "Tutor / STEM Instructor",
     location: "Lake Zurich, Illinois",
     date: "May 2023 - August 2023",
     skills: ["math", "Python", "SAT/ACT prep", "tutoring", "communication"],
