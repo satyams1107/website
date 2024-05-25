@@ -7,7 +7,7 @@ const Home = () => {
     >
       <div className="px-10 pt-10 drop-shadow-lg">
         <img
-          src="https://media.licdn.com/dms/image/C4D03AQEh5TQYOVabFg/profile-displayphoto-shrink_400_400/0/1658277944683?e=1715817600&v=beta&t=6wJXkNsW_zn2-UwrWLKllZBJK_oglZziLGyoAbSV_Sc"
+          src="../images/profile.jpg"
           className="rounded-full h-auto max-w-sm mx-auto border border-4 border-white"
           alt="Self Picture"
         />
