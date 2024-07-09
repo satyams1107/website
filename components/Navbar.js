@@ -69,7 +69,7 @@ const Navbar = () => {
             <li>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1RalFJ4Qjbf-_J9Uy7ZWqNZHL-fncGgOX/view?usp=sharing"
+                href="https://drive.google.com/file/d/1qx6gen7qTDHnqO4K0DnJC6KF6Zu5xFvO/view?usp=sharing"
                 className="block py-2 px-5 text-gray-900 rounded-xl w-[110px] h-[40px] flex items-center justify-center hover:bg-dark md:hover:bg-dark md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-dark bg-opacity-60 hover:scale-105 ease-in-out duration-200"
               >
                 Resume

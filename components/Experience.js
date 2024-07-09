@@ -9,7 +9,7 @@ export const experience = [
     role: "Software Engineer Intern",
     location: "Olathe, Kansas",
     date: "May 2024 - June 2024",
-    skills: ["avionics", "embedded", "C/C#", "Python", "audio", ".NET", "WPF MMVM"],
+    skills: ["C/C++", "UART", "TCP/IP", "C#", "audio", ".NET", "WPF MMVM"],
     link: "https://www.garmin.com/en-US/c/aviation/general/",
   },
   {
