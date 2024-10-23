@@ -1,6 +1,6 @@
-'use client';
+"use client";
 import React from "react";
-import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 export const project = [
   {
     id: 1,
@@ -75,12 +75,12 @@ export const project = [
 
 const Projects = () => {
   const slideLeft = () => {
-    var slider = document.getElementById('slider_projects');
+    var slider = document.getElementById("slider_projects");
     slider.scrollLeft = slider.scrollLeft - 500;
   };
 
   const slideRight = () => {
-    var slider = document.getElementById('slider_projects');
+    var slider = document.getElementById("slider_projects");
     slider.scrollLeft = slider.scrollLeft + 500;
   };
 
@@ -90,7 +90,11 @@ const Projects = () => {
         <h>Projects</h>
       </div>
       <div className="relative flex items-center content-center bg-dark py-5">
-        <MdChevronLeft className="opacity-75 hover:opacity-100 bg-silver bg-opacity-50" onClick={slideLeft} size={100} />
+        <MdChevronLeft
+          className="opacity-75 hover:opacity-100 bg-silver bg-opacity-50"
+          onClick={slideLeft}
+          size={100}
+        />
         <div
           id="slider_projects"
           className="w-auto h-[auto] items-center content-center soverflow-x-scroll overflow-y-hidden scroll whitespace-nowrap scroll-smooth scrollbar-hide space-x-10"
@@ -98,12 +102,11 @@ const Projects = () => {
           {project.map((item) => (
             <div
               key={item.id}
-              className="w-[650px] h-[400px] inline-block cursor-pointer scale-90 hover:scale-95 ease-in-out duration-300 shadow-lg bg-white rounded-xl p-2 shadow-2xl hover:shadow-[0_0_2px_#fff,inset_0_0_5px_#fff,0_0_5px_#08f,0_0_10px_#08f,0_0_10px_#08f]
-             "
+              className="w-[650px] h-[400px] inline-block cursor-pointer scale-90 hover:scale-95 ease-in-out duration-300 shadow-lg bg-white rounded-xl p-2 shadow-2xl overflow-hidden hover:shadow-[0_0_2px_#fff,inset_0_0_5px_#fff,0_0_5px_#08f,0_0_10px_#08f,0_0_10px_#08f]"
             >
               <a href={item.link}>
                 <div className=" w-auto">
-                  <div className="flex flex-rowjustify-center items-center">
+                  <div className="flex flex-row justify-center items-center">
                     <img
                       className="w-auto h-[200px] p-5"
                       src={item.logo}
@@ -118,8 +121,10 @@ const Projects = () => {
                       </div>
                       <div className="pl-12 pt-7 pb-2 flex flex-wrap text-l ">
                         {item.skills.map((skill, index) => (
-                          <span key={index}
-                          className="inline-block bg-beige rounded-full px-3 py-1  font-semibold text-gray-700 mr-2 mb-2">
+                          <span
+                            key={index}
+                            className="inline-block bg-beige rounded-full px-3 py-1  font-semibold text-gray-700 mr-2 mb-2"
+                          >
                             {skill}
                           </span>
                         ))}
@@ -131,7 +136,11 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        <MdChevronRight className="opacity-75 hover:opacity-100 bg-silver bg-opacity-50" onClick={slideRight} size={100} />
+        <MdChevronRight
+          className="opacity-75 hover:opacity-100 bg-silver bg-opacity-50"
+          onClick={slideRight}
+          size={100}
+        />
       </div>
     </>
   );
