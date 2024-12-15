@@ -26,7 +26,7 @@ const Navbar = () => {
           <a
             target="_blank"
             className="flex items-center space-x-3 rtl:space-x-reverse px-5 hover:scale-125 ease-in-out duration-200 hover:drop-shadow-lg"
-            href="https://github.com/satyams1107"
+            href="https://github.com/SatyamS17"
           >
             <img
               src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
@@ -69,7 +69,7 @@ const Navbar = () => {
             <li>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1hQQbWoo957_SsHdv54ZqR0Qxw-G1O9zw/view?usp=sharing"
+                href="https://drive.google.com/file/d/1PGnD0UxoNEue1deBeqVDpPvYgElLERkh/view?usp=sharing"
               >
                 Resume
               </a>
