@@ -18,7 +18,7 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/satyamsingh7/"
           >
             <img
-              src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
+              src="images\insta.png"
               className="h-auto h-10 w-10 mr-2"
               alt="LinkedIn"
             />
@@ -40,7 +40,7 @@ const Navbar = () => {
             href="https://www.instagram.com/satyams1107/"
           >
             <img
-              src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png"
+              src="images\linkedin.png"
               className="h-auto h-10 w-10 mr-2"
               alt="Instagram"
             />
