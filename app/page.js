@@ -23,9 +23,7 @@ const Home = () => {
             {" "}
             Hoeft Technology and Management Minor
           </p>
-          <p className="text-3xl text-center">
-            Innovation, Leadership & Engineering Entrepreneurship
-          </p>
+
           <div className="flex flex-row space-x-10">
             <a href="https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/computer-engineering">
               <img
@@ -34,13 +32,7 @@ const Home = () => {
                 alt="UIUC"
               />
             </a>
-            <a  href="https://tec.illinois.edu/academics/degree">
-            <img
-              className="w-[150px] pt-5"
-              src="https://tec.illinois.edu/_sitemanager/viewphoto.aspx?id=56458&s=1920&h=1200"
-              alt="ILEE"
-            />
-            </a>
+            
           </div>
         </div>
       </div>

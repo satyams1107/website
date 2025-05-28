@@ -2,9 +2,19 @@
 import React from "react";
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 export const experience = [
-  {
+    {
     id: 1,
-    logo: "https://cdn.iconscout.com/icon/free/png-256/free-garmin-3628786-3030148.png",
+    logo: "../images/blue.jpg",
+    name: "Blue Origin",
+    role: "Software Engineer Intern",
+    location: "Kent, Washington",
+    date: "May 2025 - June 2025",
+    skills: ["Python", "Machine Learning", "Avionics", "Automation"],
+    link: "https://www.blueorigin.com/",
+  },
+  {
+    id: 2,
+    logo: "../images/garmin.png",
     name: "Garmin",
     role: "Software Engineer Intern",
     location: "Olathe, Kansas",
@@ -13,7 +23,7 @@ export const experience = [
     link: "https://www.garmin.com/en-US/c/aviation/general/",
   },
   {
-    id: 2,
+    id: 3,
     logo: "../images/illini_ev_concept.png",
     name: "Illini EV Concept",
     role: "Embedded Project Lead",
@@ -23,7 +33,7 @@ export const experience = [
     link: "https://evconcept.engr.illinois.edu/",
   },
   {
-    id: 3,
+    id: 4,
     logo: "../images/iss.png",
     name: "Illinois Space Society",
     role: "Avionic Software Engineer",
@@ -33,7 +43,7 @@ export const experience = [
     link: "https://www.illinoisspacesociety.org/",
   },
   {
-    id: 4,
+    id: 5,
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzcMf1wCjte6pX_MvN88oyO0TH1jvtG0l1AHZD3Ta3Sw&s",
     name: "Sylvan Learning Center",
     role: "Tutor / STEM Instructor",
