@@ -4,10 +4,10 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 export const project = [
   {
     id: 1,
-    logo: "../images/ball.png",
+    logo: "../images/nba.png",
     name: "Final Score",
     description:
-      "Developed a comprehensive, real-time web application using MySQL and Google Cloud Platform (GCP) to display the last two minutes of NBA data, enabling users to compare players, teams, and referees. Created API endpoints with MySQL, GCP, and REST to service and query 80k+ data entries across various tables in SQL database.",
+      "Developed a real-time web application using MySQL and Google Cloud Platform (GCP) to display the last two minutes of NBA data, enabling users to compare players, teams, and referees. Created API endpoints with MySQL, GCP, and REST to service and query 80k+ data entries across various tables in SQL database.",
     skills: [
       "MySQL",
       "Google Cloud Platform",
