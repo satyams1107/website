@@ -86,10 +86,16 @@ const Projects = () => {
 
   return (
     <>
-      <div className="bg-dark px-10 pt-5 pb-2 text-5xl font-bold">
-        <h>Projects</h>
+      <div
+        className="px-10 pt-5 pb-2 text-4xl font-bold text-white text-center"
+        style={{ backgroundColor: "#262626" }}
+      >
+        <h>PROJECTS</h>
       </div>
-      <div className="relative flex items-center content-center bg-dark py-5">
+      <div
+        className="relative flex items-center content-center py-5"
+        style={{ backgroundColor: "#262626" }}
+      >
         <MdChevronLeft
           className="opacity-75 hover:opacity-100 bg-silver bg-opacity-50"
           onClick={slideLeft}
@@ -102,7 +108,7 @@ const Projects = () => {
           {project.map((item) => (
             <div
               key={item.id}
-              className="w-[650px] h-[400px] inline-block cursor-pointer scale-90 hover:scale-95 ease-in-out duration-300 shadow-lg bg-white rounded-xl p-2 shadow-2xl overflow-hidden hover:shadow-[0_0_2px_#fff,inset_0_0_5px_#fff,0_0_5px_#08f,0_0_10px_#08f,0_0_10px_#08f]"
+              className="w-[650px] h-[400px] inline-block cursor-pointer scale-90 hover:scale-95 ease-in-out duration-300 shadow-lg bg-white rounded-xl p-2 shadow-2xl overflow-hidden hover:shadow-[0_0_2px_#fff,inset_0_0_5px_#fff,0_0_5px_#418d7d,0_0_10px_#418d7d,0_0_10px_#418d7d]"
             >
               <a href={item.link}>
                 <div className=" w-auto">

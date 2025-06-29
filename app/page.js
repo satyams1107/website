@@ -1,40 +1,27 @@
 import React from "react";
+
 const Home = () => {
   return (
-    <div
-      className="py-10 gap-4 flex flex-row justify-center h-[550px] w-full h-full bg-no-repeat bg-cover
-    bg-[url('https://images.unsplash.com/photo-1689718107045-513b35f1a356?blend=000000&blend-alpha=10&blend-mode=normal&blend-w=1&crop=faces%2Cedges&h=630&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&w=1200&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzE0NzE4MTI0fA&ixlib=rb-4.0.3')]"
-    >
-      <div className="px-10 pt-10 drop-shadow-lg">
+<div
+  className="pt-24 gap-6 flex flex-row justify-center items-center h-[425px] w-full bg-no-repeat bg-cover"
+  style={{ backgroundImage: "url('/images/background.jpg')" }}
+>
+      <div className="px-10 drop-shadow-lg -mt-5">
         <img
           src="../images/profile.jpg"
-          className="rounded-full h-auto max-w-sm mx-auto border border-4 border-white"
+          className="rounded-full h-auto max-w-xs mx-auto border-4 border-white"
           alt="Self Picture"
         />
       </div>
 
-      <div className="drop-shadow-lg">
-        <h1 className="mt-10 text-center text-7xl font-bold leading-9 tracking-tight text-white">
-          Satyam Singh
+      <div className="drop-shadow-lg flex flex-col justify-center space-y-4">
+        <h1 className="text-center text-7xl font-bold leading-9 tracking-tight text-white">
+          SATYAM SINGH
         </h1>
-        <div className="flex flex-col items-center justify-center mt-10">
-          <p className="text-3xl text-center font-bold"> Computer Engineering</p>
-          <p className="text-3xl text-center py-5 ">
-            {" "}
-            Hoeft Technology and Management Minor
-          </p>
-
-          <div className="flex flex-row space-x-10">
-            <a href="https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/computer-engineering">
-              <img
-                className="w-[100px] pt-5"
-                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Illinois_Block_I.png"
-                alt="UIUC"
-              />
-            </a>
-            
-          </div>
-        </div>
+        <p className="text-3xl text-center font-bold pt-10">
+          Computer Engineering @ UIUC
+        </p>
+        <p className="text-3xl text-center">Hoeft Technology and Management Minor</p>
       </div>
     </div>
   );

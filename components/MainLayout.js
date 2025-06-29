@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const MainLayout = ({ children }) => {
   return (
-    <div >
-      <Navbar></Navbar>
+    <div>
+      <Navbar />
       <main>{children}</main>
     </div>
   );
