@@ -9,6 +9,7 @@ const ExperienceCard = ({
   skills,
   link,
   backgroundImage,
+  imagePostion,
   side,
   details,
   textColor = "white",
@@ -28,7 +29,7 @@ const ExperienceCard = ({
       className={`relative w-screen bg-cover bg-center min-h-[400px] flex items-center ${justifyClass} mt-3  overflow-hidden`}
       style={{
         backgroundImage: `url('${backgroundImage}')`,
-        backgroundPosition: "center 80%",
+        backgroundPosition: imagePostion,
       }}
     >
       {/* Main card content */}

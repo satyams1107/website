@@ -10,6 +10,7 @@ const experience = [
     skills: ["Python", "Machine Learning", "Avionics", "Automation"],
     link: "https://www.blueorigin.com/",
     backgroundImage: "../images/blue_background.jpg",
+    imagePostion: "center bottom 20%",
     side: "left",
     details: [
       "Leveraged the TensorFlow decision tree classifier machine learning model to develop a root cause analysis tool trained on 70+ simulated flight datasets, identifying the cause of signal failures.",
@@ -26,6 +27,7 @@ const experience = [
     skills: ["C/C++", "UART", "Python", "C#", "audio", ".NET", "WPF MMVM"],
     link: "https://www.garmin.com/en-US/c/aviation/general/",
     backgroundImage: "../images/garmin_background.jpg",
+    imagePostion: "center bottom 30%",
     side: "right",
     details: [
       "Engineered a UART communication protocol for controlling Bluetooth features on an ARM processor, prototyped and tested over TCP/IP, enabling external devices to manage 21+ Bluetooth features.",
@@ -43,6 +45,7 @@ const experience = [
     skills: ["C", "Microcontrollers", "CAN", "CubeIDE", "STM32", "Python"],
     link: "https://evconcept.engr.illinois.edu/",
     backgroundImage: "../images/ev_background.jpg",
+    imagePostion: "center bottom 40%",
     side: "right",
     details: [
       "Spearheaded the development of a USB to CAN converter, resulting in an increase in communication speed between the autonomous computer program and the vehicle’s microcontrollers.",
@@ -59,6 +62,7 @@ const experience = [
     skills: ["Avionics", "RTOS", "C++", "Embedded", "SILSIM/HILSIM"],
     link: "https://www.garmin.com/en-US/c/aviation/general/",
     backgroundImage: "../images/iss_background.jpg",
+    imagePostion: "center bottom 55%",
     side: "left",
     details: [
       "Designed a Staging Finite State Machine (FSM) for a two-stage rocket with a rapid self-correction feature ensuring optimal rocket functionality.",
