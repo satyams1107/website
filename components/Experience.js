@@ -60,7 +60,7 @@ const experience = [
     location: "Champaign, Illinois",
     date: "August 2023 - May 2024",
     skills: ["Avionics", "RTOS", "C++", "Embedded", "SILSIM/HILSIM"],
-    link: "https://www.garmin.com/en-US/c/aviation/general/",
+    link: "https://www.illinoisspacesociety.org/",
     backgroundImage: "../images/iss_background.jpg",
     imagePostion: "center bottom 55%",
     side: "left",
