@@ -103,7 +103,7 @@ const ExperienceCard = ({
 
       {/* Sliding panel - comes from opposite side of the card */}
       <div
-        className={`absolute top-0 h-full bg-white text-black shadow-lg transition-all duration-300 ease-in-out z-20`}
+        className={`absolute top-0 h-full bg-white text-black shadow-lg transition-all duration-300 ease-in-out z-10`}
         style={{
           width: expanded ? "450px" : "0px",
           [side === "left" ? "right" : "left"]: "0px",
