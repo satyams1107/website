@@ -74,7 +74,7 @@ const ExperienceCard = ({
           e.stopPropagation();
           setExpanded((prev) => !prev);
         }}
-        className={`absolute top-1/2 transform -translate-y-1/2 text-white px-4 py-12 transition-all duration-200 z-50 shadow-lg font-bold flex items-center justify-center text-lg`}
+        className={`absolute top-1/2 transform -translate-y-1/2 text-white px-4 py-12 transition-all duration-200 z-20 shadow-lg font-bold flex items-center justify-center text-lg`}
         style={{
           [side === "left" ? "right" : "left"]:
             side === "left" ? "5px" : "-10px",
@@ -134,10 +134,10 @@ const ExperienceCard = ({
           }
         `}</style>
         <div
-  className={`p-6 w-full min-w-[300px] h-full ${
-    side === 'left' ? 'pr-20' : 'pl-20'
-  }`}
->
+          className={`p-6 w-full min-w-[300px] h-full ${
+            side === "left" ? "pr-20" : "pl-20"
+          }`}
+        >
           <h2 className="text-xl font-bold mb-4">{title}</h2>
           <div className="space-y-3">
             <ul className="list-disc pl-6 text-gray-700 space-y-2">

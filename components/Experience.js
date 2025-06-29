@@ -68,7 +68,7 @@ const experience = [
       "Designed a Staging Finite State Machine (FSM) for a two-stage rocket with a rapid self-correction feature ensuring optimal rocket functionality.",
       "Leveraged hardware-in-the-loop (HILSIM) to rigorously test and validate real-time embedded system responses, enhancing the rocket's reliability and reducing in pre-launch anomalies.",
     ],
-    textColor: "#dcc800ff",
+    textColor: "#7b141cff",
   },
 ];
 const Experience = () => {
