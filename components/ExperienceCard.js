@@ -16,17 +16,27 @@ const ExperienceCard = ({
 }) => {
   const [expanded, setExpanded] = useState(false);
 
-  const justifyClass = side === "left" ? "justify-start" : "justify-end";
-  const marginClass = side === "left" ? "ml-10" : "mr-10";
+  // Base side classes (for desktop)
+  const justifyClass = side === "left" ? "md:justify-start" : "md:justify-end";
+  const marginClass = side === "left" ? "md:ml-10" : "md:mr-10";
 
-  const buttonPosition =
-    side === "left" ? "-right-10 rounded-l-md" : "-left-10 rounded-r-md";
+  // For the DETAILS button, we will always push from the right on mobile
+  const buttonStyle = {
+    top: "50%",
+    transform: "translateY(-50%)",
+    backgroundColor: textColor,
+    writingMode: "vertical-rl",
+    textOrientation: "mixed",
+    borderRadius: "12px 0 0 12px", // Always right side on mobile
+    minHeight: "120px",
+    minWidth: "50px",
+  };
 
-  const buttonTextColor = side === "left" ? "text-white" : "text-black";
+  const isLeft = side === "left";
 
   return (
     <div
-      className={`relative w-screen bg-cover bg-center min-h-[400px] flex items-center ${justifyClass} mt-3  overflow-hidden`}
+      className={`relative w-screen bg-cover bg-center min-h-[400px] flex items-center ${justifyClass} mt-3 overflow-hidden flex-col md:flex-row`}
       style={{
         backgroundImage: `url('${backgroundImage}')`,
         backgroundPosition: imagePostion,
@@ -41,13 +51,8 @@ const ExperienceCard = ({
           <div className="text-3xl mb-2 font-bold" style={{ color: textColor }}>
             {title}
           </div>
-          <p
-            className="mb-2 text-2xl font-medium italic"
-            style={{ color: "white" }}
-          >
-            {role}
-          </p>
-          <div className="text-2xl" style={{ color: "white" }}>
+          <p className="mb-2 text-2xl font-medium italic text-white">{role}</p>
+          <div className="text-2xl text-white">
             <p>{location}</p>
             <p>{date}</p>
           </div>
@@ -56,9 +61,7 @@ const ExperienceCard = ({
               <span
                 key={i}
                 className="inline-block rounded-full px-3 py-1 font-semibold text-white mr-2 mb-2 shadow-sm"
-                style={{
-                  backgroundColor: textColor,
-                }}
+                style={{ backgroundColor: textColor }}
               >
                 {skill}
               </span>
@@ -67,51 +70,53 @@ const ExperienceCard = ({
         </div>
       </a>
 
-      {/* Learn More button - Larger and better positioned */}
+      {/* DETAILS Button */}
       <button
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
           setExpanded((prev) => !prev);
         }}
-        className={`absolute top-1/2 transform -translate-y-1/2 text-white px-4 py-12 transition-all duration-200 z-20 shadow-lg font-bold flex items-center justify-center text-lg`}
+        className={`absolute z-20 shadow-lg font-bold flex items-center justify-center text-lg px-4 py-12 text-white transition-all duration-200
+        hidden md:flex`}
         style={{
-          [side === "left" ? "right" : "left"]:
-            side === "left" ? "5px" : "-10px",
-          backgroundColor: textColor,
-          writingMode: "vertical-rl",
-          textOrientation: "mixed",
-          borderRadius: side === "left" ? "12px 0 0 12px" : "0 12px 12px 0",
-          minHeight: "120px",
-          minWidth: "50px",
+          ...buttonStyle,
+          right: isLeft ? "5px" : "auto",
+          left: isLeft ? "auto" : "-10px",
         }}
         onMouseEnter={(e) => {
-          e.target.style.backgroundColor = textColor + "DD"; // Slightly darker on hover
+          e.target.style.backgroundColor = textColor + "DD";
         }}
         onMouseLeave={(e) => {
           e.target.style.backgroundColor = textColor;
         }}
       >
-        {expanded
-          ? side === "left"
-            ? "HIDE"
-            : "HIDE"
-          : side === "left"
-          ? "DETAILS"
-          : "DETAILS"}
+        {expanded ? "HIDE" : "DETAILS"}
       </button>
 
-      {/* Sliding panel - comes from opposite side of the card */}
+      {/* Mobile DETAILS Button (always on right) */}
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setExpanded((prev) => !prev);
+        }}
+        className="absolute right-2 top-4 z-20 flex md:hidden px-3 py-2 text-sm font-semibold rounded-md shadow-md"
+        style={{
+          backgroundColor: textColor,
+          color: "white",
+        }}
+      >
+        {expanded ? "Hide" : "Details"}
+      </button>
+
+      {/* Slide-out Details Panel */}
       <div
         className={`absolute top-0 h-full bg-white text-black shadow-lg transition-all duration-300 ease-in-out z-10`}
         style={{
           width: expanded ? "450px" : "0px",
-          [side === "left" ? "right" : "left"]: "0px",
-          transform: expanded
-            ? "translateX(0)"
-            : side === "left"
-            ? "translateX(100%)"
-            : "translateX(-100%)",
+          right: 0, // Always open from right
+          transform: expanded ? "translateX(0)" : "translateX(100%)",
           opacity: expanded ? 1 : 0,
           overflowY: expanded ? "auto" : "hidden",
           overflowX: "hidden",
@@ -133,22 +138,17 @@ const ExperienceCard = ({
             background: #a8a8a8;
           }
         `}</style>
-        <div
-          className={`p-6 w-full min-w-[300px] h-full ${
-            side === "left" ? "pr-20" : "pl-20"
-          }`}
-        >
+        <div className="p-6 w-full min-w-[300px] h-full pr-8">
           <h2 className="text-xl font-bold mb-4">{title}</h2>
-          <div className="space-y-3">
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              {details.map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
-          </div>
+          <ul className="list-disc pl-6 text-gray-700 space-y-2">
+            {details.map((point, idx) => (
+              <li key={idx}>{point}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
   );
 };
+
 export default ExperienceCard;
