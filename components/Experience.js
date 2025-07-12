@@ -7,7 +7,7 @@ const experience = [
     role: "Software Engineer Intern",
     location: "Kent, Washington",
     date: "May 2025 - June 2025",
-    skills: ["Python", "Machine Learning", "Avionics", "Automation"],
+    skills: ["Python", "Machine Learning", "TensorFlow", "Avionics", "Automation"],
     link: "https://www.blueorigin.com/",
     backgroundImage: "../images/blue_background.jpg",
     imagePostion: "center bottom 20%",
